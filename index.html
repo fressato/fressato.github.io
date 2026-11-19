@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jessica Fressato | Tradutora EN↔PT-BR e Engenheira de Dados e Software</title>
+<meta name="description" content="Tradução e legendagem inglês↔português com formação técnica em engenharia de dados e software.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+<style>
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --ink:#14212c; --muted:#4d5d6b; --line:#d3dce4;
+  --accent:#0b6e66; --accent-ink:#ffffff; --sub:#ffd84d; --frame:#101820; --frame-ink:#f2f5f7;
+  --ph-bg:#fff3b0; --ph-ink:#4a3b00;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e161d; --surface:#15202a; --ink:#e8eef2; --muted:#a3b2be; --line:#27384a;
+    --accent:#4fc7bb; --accent-ink:#06211e; --frame:#070c10; --ph-bg:#4a3b00; --ph-ink:#ffe27a;
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.15;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:-.01em;max-width:18ch}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+h3{font-size:1.2rem;margin-bottom:.25em}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+.ph{background:var(--ph-bg);color:var(--ph-ink);padding:0 .25em;border-radius:3px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;flex-wrap:wrap}
+header.top strong{font-family:Georgia,serif;font-size:1.15rem}
+nav a{margin-left:1.1rem;color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--accent);text-decoration:underline}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;padding:2.5rem 0 4rem}
+.hero .lead{font-size:1.2rem;color:var(--muted)}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;font-weight:700;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.1)}
+.frame{background:var(--frame);border-radius:.75rem;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:1.25rem;color:var(--frame-ink);position:relative;overflow:hidden;border:1px solid var(--line)}
+.frame .code{position:absolute;top:1rem;left:1.1rem;right:1.1rem;font:.85rem/1.5 ui-monospace,Menlo,Consolas,monospace;color:#7fd6cc;opacity:.9}
+.frame .code span{color:#9db0be}
+.subs{text-align:center;font-size:clamp(.95rem,2.2vw,1.2rem);line-height:1.4}
+.subs .en{color:#fff;margin-bottom:.35rem}
+.subs .pt{background:rgba(0,0,0,.65);color:var(--sub);display:inline-block;padding:.15rem .6rem;border-radius:.25rem;font-weight:700}
+.frame small{margin-top:.75rem;color:#9db0be;font-size:.78rem}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.services-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;list-style:none;margin:1.25rem 0 0;padding:0}
+.services-list li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.55rem;padding:1rem 1.1rem;color:var(--muted)}
+.services-list li strong{display:block;color:var(--ink);margin-bottom:.2rem}
+
+/* sample before/after */
+.sample{background:var(--surface);border:1px solid var(--line);border-radius:.6rem;padding:1.25rem;margin-top:1.5rem}
+.sample .row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.sample b{display:block;font-size:.9rem;color:var(--muted);margin-bottom:.25rem}
+.sample q{quotes:"“" "”"}
+.sample p{margin:0}
+
+/* publication */
+.pub{border-left:4px solid var(--accent);padding:.25rem 0 .25rem 1.1rem;margin:1.75rem 0}
+.pub p{margin:0}
+
+/* projects */
+.projects-grid{display:grid;gap:.25rem}
+.project-link{font-weight:700;white-space:nowrap}
+.project-description{min-height:0}
+.load-state{padding:1.25rem 0;color:var(--muted)}
+.proj{border-top:1px solid var(--line);padding:1.25rem 0;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
+.proj:last-of-type{border-bottom:1px solid var(--line)}
+.proj p{margin:.25rem 0 0;color:var(--muted)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem}
+.tags span{font-size:.82rem;border:1px solid var(--line);border-radius:999px;padding:.1rem .65rem;background:var(--surface)}
+
+footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero,.two,.sample .row{grid-template-columns:1fr}
+  .services-list{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}
+  nav a{margin:0 1rem 0 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <strong>Jessica Fressato</strong>
+  <nav aria-label="Principal">
+    <a href="#traducao">Tradução</a>
+    <a href="#tech">Dados e software</a>
+    <a href="#trajetoria">Trajetória</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <h1>Traduzo palavras. Construo sistemas.</h1>
+    <p class="lead">Sou tradutora de inglês↔português brasileiro, especialista em conteúdo técnico e criação de legendas. Minha experiência em engenharia de dados e software me permite compreender processos, ferramentas e tecnologias para entregar traduções precisas e naturais.</p>
+    <div class="btns">
+      <a class="btn main" href="#contato">Pedir um orçamento</a>
+      <a class="btn alt" href="#tech">Ver projetos</a>
+    </div>
+  </div>
+  <div class="frame" role="img" aria-label="Exemplo de legenda: frase em inglês e sua tradução em português">
+    <div class="code">SELECT clean_data<br><span>FROM raw_data</span><br>WHERE quality = 'good';</div>
+    <div class="subs">
+      <div class="en">Garbage in, garbage out.</div>
+      <div class="pt">Dados ruins, resultados ruins.</div>
+    </div>
+    <small>Legenda EN→PT-BR</small>
+  </div>
+</div>
+
+<section id="traducao">
+  <h2>Atividades e serviços</h2>
+  <ul class="services-list">
+    <li><strong>Tradução técnica EN↔PT-BR:</strong> textos de tecnologia, dados, software, engenharia e áreas corporativas, com precisão terminológica e naturalidade</li>
+    <li><strong>Documentação e instruções:</strong> manual de usuário, documentação de software, APIs, bases de dados, processos e sistemas</li>
+    <li><strong>Legendas:</strong> criação e revisão de arquivos .srt, sincronização com o áudio, leitura natural e adaptação cultural</li>
+    <li><strong>Localização de conteúdo:</strong> adaptação de termos, referências e estilo para o público brasileiro</li>
+    <li><strong>Materiais educacionais:</strong> cursos, tutoriais, apresentações, treinamentos e textos didáticos</li>
+    <li><strong>Conteúdo corporativo:</strong> artigos, newsletters, materiais institucionais e comunicação interna</li>
+    <li><strong>Revisão editorial:</strong> consistência terminológica, clareza, fluidez, gramática e padronização</li>
+    <li><strong>Controle de qualidade:</strong> conferência de sentido, terminologia, formatação e correspondência entre original e tradução</li>
+  </ul>
+
+  <div class="pub">
+    <h3>Publicação</h3>
+    <p>Artigo na <em>Revista Brasileira de Nutrição Esportiva</em>: <a href="https://www.rbne.com.br/index.php/rbne/pt_BR/article/view/895" rel="noopener">Atualização sobre estimativas do gasto calórico de atletas: uso da disponibilidade energética</a>.</p>
+  </div>
+</section>
+
+<section id="tech">
+  <h2>Dados e software</h2>
+  <p>Atuo como engenheira de dados e software, construindo pipelines, sistemas e automações que funcionam em produção.</p>
+
+  <div id="projects-grid" class="projects-grid" aria-live="polite">
+    <p class="load-state">Carregando projetos do GitHub...</p>
+  </div>
+
+  <p style="margin-top:1.25rem">
+    <a id="github-profile" href="#" rel="noopener">Todos os projetos no GitHub</a>
+  </p>
+</section>
+
+<section id="trajetoria">
+  <h2>Trajetória</h2>
+  <p>A escrita sempre foi a base do meu trabalho, além do código.</p>
+  <ul class="list">
+    <li><strong>Atendimento por escrito:</strong> chat, e-mail e redes sociais, incluindo canais críticos como Reclame Aqui e ouvidoria, onde cada resposta exigia clareza e cuidado com o tom.</li>
+    <li><strong>Analista de produtos:</strong> redigi treinamentos e documentações para equipes, usando SharePoint, PowerPoint, Word e WordPress.</li>
+    <li><strong>Engenharia de dados e software:</strong> desenvolvimento de pipelines, automações e sistemas voltados à produção.</li>
+  </ul>
+</section>
+
+<section id="contato">
+  <h2>Vamos conversar</h2>
+  <p>Conte o que você precisa traduzir, legendar ou construir, e eu respondo com prazo e valor.</p>
+  <div class="btns">
+    <a class="btn main" href="mailto:jessicamfressato@gmail.com">Enviar email</a>
+    <a class="btn alt" href="https://www.linkedin.com/in/jessica-fressato" rel="noopener">LinkedIn</a>
+    <a class="btn alt" href="https://github.com/fressato" rel="noopener">GitHub</a>
+  </div>
+  <p style="margin-top:1rem;color:var(--muted)">Também atendo pelo <a href="https://www.workana.com/">Workana</a>.</p>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="y">2026</span> Jessica Fressato. Tradução EN↔PT-BR, dados e software.</p>
+</footer>
+</div>
+<script>
+const GITHUB_USERNAME = "fressato";
+const PROJECT_LIMIT = 3;
+
+async function carregarProjetos() {
+  const grid = document.getElementById("projects-grid");
+  const profileLink = document.getElementById("github-profile");
+
+  if (!GITHUB_USERNAME) {
+    grid.innerHTML = "<p class=\"load-state\">Configure seu usuário do GitHub no código.</p>";
+    return;
+  }
+
+  profileLink.href = `https://github.com/${GITHUB_USERNAME}`;
+
+  try {
+    const resposta = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`
+    );
+
+    if (!resposta.ok) {
+      throw new Error("Não foi possível consultar o GitHub.");
+    }
+
+    const repositorios = await resposta.json();
+    const projetos = repositorios
+      .filter(repositorio =>
+        !repositorio.fork &&
+        repositorio.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase() &&
+        repositorio.name.toLowerCase() !== ".github"
+      )
+      .sort((a, b) => b.stargazers_count - a.stargazers_count)
+      .slice(0, PROJECT_LIMIT);
+
+    grid.replaceChildren();
+
+    if (!projetos.length) {
+      grid.innerHTML = "<p class=\"load-state\">Nenhum projeto público encontrado.</p>";
+      return;
+    }
+
+    for (const projeto of projetos) {
+      const item = document.createElement("article");
+      item.className = "proj";
+
+      const content = document.createElement("div");
+
+      const titulo = document.createElement("h3");
+      titulo.textContent = projeto.name;
+
+      const descricao = document.createElement("p");
+      descricao.className = "project-description";
+      descricao.textContent = projeto.description || "Projeto disponível no GitHub.";
+
+      const tags = document.createElement("div");
+      tags.className = "tags";
+
+      if (projeto.language) {
+        const linguagem = document.createElement("span");
+        linguagem.textContent = projeto.language;
+        tags.appendChild(linguagem);
+      }
+
+      content.append(titulo, descricao, tags);
+
+      const link = document.createElement("a");
+      link.className = "project-link";
+      link.href = projeto.html_url;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Ver no GitHub";
+
+      item.append(content, link);
+      grid.appendChild(item);
+    }
+  } catch (erro) {
+    grid.innerHTML = "<p class=\"load-state\">Os projetos não puderam ser carregados no momento.</p>";
+  }
+}
+
+document.getElementById("y").textContent = new Date().getFullYear();
+carregarProjetos();
+</script>
+</body>
+</html>
